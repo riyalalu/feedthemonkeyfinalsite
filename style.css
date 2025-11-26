@@ -1,0 +1,35 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Match sketch background */
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.scroll-image {
+  display: block;
+  width: 100%;
+  max-width: 1920px; /* Cap width at native resolution */
+  height: auto;      /* Maintain aspect ratio */
+}
+
+/* This container holds the canvas */
+#sketch-container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+}
+
+/* This forces the p5 canvas to be responsive */
+canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
