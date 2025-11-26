@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -15,25 +15,26 @@ html, body {
 
 .scroll-image {
   display: block;
-  width: 100%;       /* Forces image to fill the browser width */
-  height: auto;      /* Maintains aspect ratio */
-  object-fit: cover; /* Ensures no stretching if resizing weirdly */
+  width: 100%;
+  height: auto;      /* Keeps the image proportional */
+  object-fit: cover;
 }
 
-/* 2. SKETCH CONTAINER - CENTERED 16:9 */
+/* 2. SKETCH CONTAINER */
 #sketch-wrapper {
   width: 100%;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 50px; /* Adds some breathing room at the bottom */
 }
 
 #sketch-container {
-  /* This holds the canvas */
-  width: 100%;
-  max-width: 1920px; /* The sketch itself stops at 1920px wide */
+  /* CHANGED: Set to 100% to fill screen width completely */
+  width: 100%; 
+  max-width: 100%; /* Previously was 1920px, removing this makes it huge */
+  
+  /* Maintains the 16:9 box shape based on width */
   aspect-ratio: 16 / 9;
   position: relative;
 }
